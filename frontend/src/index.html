@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Web Lab 1</title>
+
+    <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+
+<header>
+    <div class="name-and-group">
+        Кайгородова Александра Андреевна
+        <br>
+        Группа PЗ213
+    </div>
+
+    <div class="title-and-variant">
+        <div class="title">
+            Лабораторная №1
+        </div>
+        <div class="variant">
+            Вариант 466082
+        </div>
+    </div>
+</header>
+
+<main>
+    <div class="coords-and-inputs-container">
+        <div class="inputs">
+            <form id="coords-form" method="get" onsubmit="submitForm(event)">
+                <div class="x-input">
+                    <h4>Выберите X</h4>
+                    <label>
+                        <select id="xSelect" name="x">
+                            <option value="-4">-4</option>
+                            <option value="-3">-3</option>
+                            <option value="-2">-2</option>
+                            <option value="-1">-1</option>
+                            <option value="0">0</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                        </select>
+                    </label>
+                </div>
+
+                <div class="y-input">
+                    <h4>Введите Y</h4>
+                    <label>
+                        <input id="YInput" type="text" placeholder="от -5 до 3" maxlength="6"/>
+                    </label>
+                </div>
+
+                <div class="r-input">
+                    <h4>Выберите R</h4>
+                    <div class="r-buttons">
+                        <button class="r-button" type="button" data-value="1">1</button>
+                        <button class="r-button" type="button" data-value="1.5">1.5</button>
+                        <button class="r-button" type="button" data-value="2">2</button>
+                        <button class="r-button" type="button" data-value="2.5">2.5</button>
+                        <button class="r-button" type="button" data-value="3">3</button>
+                    </div>
+                    <input type="hidden" id="rValue" name="r" value="">
+                </div>
+
+                <button type="submit" id="submitButton">Проверить точку</button>
+            </form>
+        </div>
+
+        <div class="coordinate-plane">
+            <canvas id="coordinate-plane"></canvas>
+        </div>
+        <table class="res-table">
+            <thead id="table-head">
+            <tr>
+                <th>
+                    X
+                </th>
+                <th>
+                    Y
+                </th>
+                <th>
+                    R
+                </th>
+                <th>
+                    Текущее время
+                </th>
+                <th>
+                    Время исполнения (ms)
+                </th>
+                <th>
+                    Результат
+                </th>
+            </tr>
+            </thead>
+
+            <tbody>
+
+            </tbody>
+        </table>
+    </div>
+
+
+
+
+</main>
+
+<footer>
+    <small> DJ Shunya Enterprise. All Rights Reserved.</small>
+</footer>
+
+<script src="request.js"></script>
+<script src="graph.js"></script>
+
+</body>
+</html>

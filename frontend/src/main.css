@@ -1,0 +1,228 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+:root{
+    --sweet-grey: #c9b29f;
+    --purple: #f7df90;
+    --white: #ebf2fa;
+    --yellow: #ffdc62;
+    --light-yellow: #f7df90;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--white);
+    width: 100svw;
+    height: 100svh;
+    background-attachment: fixed;
+    background-size: cover;
+    font-family: Arial, sans-serif;
+}
+
+
+header > div {
+    display: flex;
+    place-items: center;
+}
+header {
+    font-family: fantasy;
+    color: #000000;
+    font-size: 20px;
+    letter-spacing: 1px;
+}
+
+header {
+    background-color: var(--light-yellow);
+    display: flex;
+    width: 100%;
+
+    .name-and-group {
+        padding-left: 2%;
+        font-size: 20px;
+    }
+
+    .title-and-variant {
+        width: 300px;
+        padding: 1%;
+        flex-direction: column;
+        margin-left: auto;
+        font-size: 18px;
+        background-color: var(--yellow);
+
+    }
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.coords-and-inputs-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 3%;
+    align-items: flex-start;
+    padding: 2%;
+    margin-top: 3%;
+    margin-left: 2%;
+    margin-right: 2%;
+
+}
+
+
+form input {
+    padding: 5px;
+    width: 200px;
+    height: 20px;
+    border: 1px solid black;
+}
+
+.inputs {
+    background-color: var(--purple);
+    display: flex;
+    flex-direction: column;
+    place-content: center;
+    margin: 0;
+    margin-right: 2%;
+    padding: 5px;
+    border-radius: 15px;
+    min-width: 300px;
+    min-height: 300px;
+}
+h4::before {
+    content: "";
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background-image: url('images/banana.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-right: 8px;
+    vertical-align: middle;
+}
+.x-input, .y-input, .r-input {
+    margin: 5%;
+    font-size: 18px;
+
+}
+
+label + input {
+    margin-top: 2px;
+}
+#xSelect {
+    padding: 6px;
+    background-color: white;
+    border-color: black;
+    font-size: 13px;
+    color: black;
+    cursor: pointer;
+}
+
+
+#xSelect:focus {
+    outline: none;
+    border-color: #361230;
+}
+
+button[type=button] {
+    margin: 3px;
+    padding: 2px;
+    width: 40px;
+    border-radius: 8px;
+    border: 1px solid black;
+
+}
+
+.r-button:focus {
+    background-color: #361230;
+    color: white;
+}
+
+.r-button:hover {
+    background-color: var(--sweet-grey);
+    color: white;
+    box-shadow: 0 0 10px 4px white;
+}
+
+
+#submitButton {
+    margin-top: 8%;
+    margin-bottom: 3%;
+    background-color: white ;
+    color: black;
+    border: none;
+    border-radius: 15px;
+    width: 50%;
+    padding: 20% 5%;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    background-size: cover;
+    background-position: center;
+}
+
+#submitButton:hover {
+    background-image: url('images/aw.jpg');
+    transform: scale(1.02);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.coordinate-plane {
+
+}
+
+table {
+    display: table; /* Убери flex! */
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0;
+    text-align: center;
+    border: 3px solid black;
+    border-radius: 10px;
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+th, td {
+    border: 1px solid black;
+    padding: 8px 12px;
+    width: auto;
+    text-align: center;
+}
+
+th:nth-child(1), td:nth-child(1) { width: 60px; }
+th:nth-child(2), td:nth-child(2) { width: 60px; }
+th:nth-child(3), td:nth-child(3) { width: 80px; }
+th:nth-child(4), td:nth-child(4) { width: 130px; }
+th:nth-child(5), td:nth-child(5) { width: 150px; }
+th:nth-child(6), td:nth-child(6) { width: 90px; }
+
+footer {
+    margin-top: 30px;
+    width: 100%;
+    text-align: center;
+    place-content: center;
+    background-color: #1f1f1f;
+    color: gray;
+}
+
+
+
+.name-and-group::first-letter {
+    font-size: 1.2em;
+    color: #361230;
+    font-weight: bold;
+}
+
+
+
